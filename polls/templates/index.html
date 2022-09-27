@@ -1,10 +1,6 @@
 {% load static %}
 
-<link 
-rel="stylesheet"
-type ="text/css"
-href="{% static 'home/css/bootstrap.css'%}"
-/>
+
 <link 
 rel="stylesheet"
 type ="text/css"
@@ -13,6 +9,7 @@ href="{% static 'home/main.css'%}"
 
 <html>
     <body>
+        
         <label for="customRange3" class="form-label">Example range</label>
 <input type="range" class="form-range" value="24" min="0" max="100" step="0.5" id="customRange3">
 <input type="range"  max-Width="50%"  min="1" max="10" oninput="this.nextElementSibling.value = this.value">
@@ -39,7 +36,11 @@ href="{% static 'home/main.css'%}"
               margin-left = '200px'
             >
          <h4>TABLE 1 This a page of the MQ-QUANT questionnaire about relations between two subjects </h4>
-      
+         <div class="range-slider" style='--min:0; --max:10; --step:1; --value:5; --text-value:"5";'>
+            <input type="range" min="0" max="10" step="1" value="5" oninput="this.parentNode.style.setProperty('--value',this.value); this.parentNode.style.setProperty('--text-value', JSON.stringify(this.value))">
+            <output></output>
+            <div class='range-slider__progress'></div>
+          </div>
         <p> 1) How do you feel, as a person, that you communicate in the family?</p>
         <div class="range-slider" style='--min:0; --max:10; --step:1; --value:5; --text-value:"5";'>
             <input type="range" min="0" max="10" step="1" value="5" oninput="this.parentNode.style.setProperty('--value',this.value); this.parentNode.style.setProperty('--text-value', JSON.stringify(this.value))">
